@@ -1,55 +1,26 @@
 <script setup>
-import FancyButton from './components/FancyButton.vue';
+import AppAlert from './components/AppAlert.vue'
 </script>
 
 <template>
-  <div class="content">
-  
-    <FancyButton>
-      <template v-slot:icon="slotProps">
-     {{ slotProps.hover ? '' : '' }}
-      </template>
-      <template v-slot:default>
-      <strong>New software update available</strong>
-    </template>
-    </FancyButton>
-
-    <FancyButton>
-      <template v-slot:icon="slotProps">
-     {{ slotProps.hover ? '' : '' }}
-      </template>
-      <template v-slot:default>
-      <strong>Your Purchase has been cofirmed</strong>
-    </template>
-    </FancyButton>
-
-    <FancyButton>
-      <template v-slot:icon="slotProps">
-     {{ slotProps.hover ? '' : '' }}
-      </template>
-      <template v-slot:default>
-      <strong>Warning: Invalid email address!</strong>
-    </template>
-    </FancyButton>
-
-    <FancyButton>
-      <template v-slot:icon="slotProps">
-     {{ slotProps.hover ? '' : '' }}
-      </template>
-      <template v-slot:default>
-      <strong>Error! Task failed successfully</strong>
-    </template>
-    </FancyButton>
-
-
-   
+  <template>
+  <div id="app">
+    <AppAlert type="info">
+      New software update available
+    </AppAlert>
+    <AppAlert type="success">
+      Your purchase has been confirmed!
+    </AppAlert>
+    <AppAlert type="warning">
+      Warning: Invalid email confirmed!.
+    </AppAlert>
+    <AppAlert type="error">
+      Error! task failed succefully.
+    </AppAlert>
   </div>
+</template>
 </template>
 
 <style scoped>
-</style>
-  
-
-
-<style scoped>
+@import './assets/tailwind.css';
 </style>
